@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background-color: #FAF9F6;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand {
+    color: black;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation .navigation-items a{
+    position: relative;
+    color: black;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+    width: 100%;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-top: 3rem;
+    margin-right: -3px;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+.heading::after {
+    content:"";
+    width: 10rem;
+    height: .8rem;
+    background-color: black;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    min-height: 90vh;
+}
+
+.container .after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.contact-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imageContact {
+    background: url("house.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+} 
+
+.contactForm {
+    padding: 25px ;
+}
+
+h2 {
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.field {
+    width: 100%;
+    border: 2px solid rgba(0,0,0,0);
+    outline: none;
+    background-color: rgba (230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 1.1 rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.field:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 880px) {
+    .container {
+        padding: 5px;
+    }
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+    .imageContact {
+        height: 0;
+    }
+    h2 {
+        padding: 0 0 10px;
+    }
+    h2:after {
+        top: 34px;
+    }
+}
+
+
